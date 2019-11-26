@@ -1,0 +1,33 @@
+---
+title: "Assignment 3"
+author: "KX"
+date: "26 November 2019"
+output:
+  ioslides_presentation: default
+  slidy_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Slide with R Output
+
+Summary of Cars data set
+
+```{r cars, echo = TRUE}
+library(plotly)
+summary(mtcars)
+```
+
+## Slide with Plot
+
+Plot of Displacement vs horsepower based on weight and cyclinders
+
+```{r pressure}
+data(mtcars)
+
+plot_ly(x= mtcars$disp, y= mtcars$hp, z = mtcars$wt, 
+type = "scatter3d", mode = "markers", color = mtcars$cyl)
+```
+
